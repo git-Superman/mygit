@@ -5,13 +5,13 @@
         <p class='t'>已有账号&nbsp;请<span @click='handleClickPush'>登陆</span></p>
     </header>
     <ul class='list'>
-        <li class='list-item'>
+        <li class='list-item list-letter'>
             <span>用户名</span>
             <input type="text" placeholder="您的用户名和登陆名">
         </li>
         <li class='list-item'>
             <span>设置密码</span>
-            <input type="password" placeholder="建议至少使用两种字符组合">
+            <input type="password" placeholder="建议使用两种字符组合">
         </li>
         <li class='list-item'>
             <span>确认密码</span>
@@ -92,6 +92,11 @@ export default {
 }
 .list{
     padding:.4rem .4rem .6rem;
+    .list-letter{
+        span{
+            letter-spacing: .11rem;
+        }
+    }
     .list-item{
         display:flex;
         align-items:center;
@@ -100,13 +105,15 @@ export default {
         border:1px solid #DFDFDF;
         span{
             display:inline-block;
-            font-size:.32rem;
+            font-size:.28rem;
             color:#666;
             margin-right:.3rem;
+            width:1.2rem;
         }
         input{
             border:0;
             outline: none;
+            font-size:.28rem;
         }
         ::-webkit-input-placeholder{
             color:#DFDFDF;
@@ -117,6 +124,9 @@ export default {
     }
     .list-input{
         position:relative;
+        span{
+            width:1.4rem;
+        }
         input{
                 width:26%;
         }
@@ -134,12 +144,12 @@ export default {
     }
     .list-pdu{
             display:flex;
-            font-size:.28rem;
+            font-size:.24rem;
             align-items: center;
             margin-top:.12rem;
             color:#999999;
             img{
-                height:.28rem;
+                height:.24rem;
                 margin-right:.12rem;
             }
     }

@@ -113,6 +113,7 @@ export default {
         input{
             border:0;
             outline: none;
+            font-size:.28rem;
         }
         ::-webkit-input-placeholder{
             color:#DFDFDF;
@@ -135,30 +136,30 @@ export default {
                 width:40%;
                 height:.84rem;
                 span{
-                        font-size: 0.32rem;
+                        font-size: 0.28rem;
                         color:#fff;
                         margin:0;
 
                 }
         }
         div{
-                display:flex;
-                justify-content: space-between;
-                align-items:center;
-                p{
-                        width:76%;
-                        height:100%;
-                        background-color:#E3E3E3;
-                }
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            p{
+                    width:76%;
+                    height:100%;
+                    background-color:#E3E3E3;
+            }
         }
     }
     .btn{
         width:100%;
         margin-top:.5rem;
         button{
-            width:100%;  
+            width:100%;
             span{
-                font-size:.32rem;
+                font-size:.28rem;
             }     
         }
     }

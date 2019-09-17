@@ -1,11 +1,11 @@
 <template>
 <div>
     <header>
-        <p>如何成为一个自律的人?</p>
+        <p>{{title}}</p>
         <div>
             <p>
                 <img src="@/assets/icon/mian-rsicon.png" alt="">
-                <span>157810</span>
+                <span>{{value}}</span>
             </p>
             <span>¥999.99</span>
         </div>
@@ -48,7 +48,7 @@
                 <p>{{plan}}%</p>
             </li>
             <li class='item-content'>
-                <p>课程介绍：Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi blanditiis debitis, sapiente dignissimos fugit eaque commodi quidem illo rerum? Ad.</p>
+                <p>{{cont}}</p>
             </li>
         </ul>
     </main>
@@ -58,7 +58,11 @@
 export default {
     data() {
         return {
-            plan:50
+            plan:50,
+            title:'如何成为一个自律的人?',
+            cont:'课程介绍:',
+            value : 157810
+
         }
 
     },
@@ -66,6 +70,12 @@ export default {
         handleClickPush(){
             this.$router.push('/smart/smartDynamicTeacherDetail');
         }
+    },
+    created(){
+        var query = this.$route.query;
+        this.title = query.test;
+        this.cont = query.cont;
+        this.value = query.value;
     }
 }
 </script>

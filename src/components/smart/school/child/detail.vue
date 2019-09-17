@@ -2,7 +2,7 @@
 <div>
     <header>
         <div>
-            <h5>小天才育林培训学校</h5>
+            <h5>{{title}}</h5>
             <span>
                 成立于2015-01-15
             </span>
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div>
-            <span>4.5分</span>
+            <span>{{value}}分</span>
             <van-rate
                 color='#4DBF68'
                 :size="16"
@@ -27,7 +27,7 @@
     </header>
     <main>
         <h5 class='title'>学校介绍</h5>
-        <p class='main-item'>
+        <p class='main-item' v-html='cont'>
             这里是学校介绍，师资力量、开设课程、开创心路历程等等。这里是学校介绍，师资力量、开设课程、开创心路历程等等。这里是学校介绍，师资力量、开设课程、开创心路历程等等。这里是学校介绍，师资力量、开设课程、开创心路历程等等。这里是学校介绍，师资力量、开设课程、开创心路历程等等。这里是学校介绍，师资力量、开设课程、开创心路历程等等。这里是学校介绍，师资力量、开设课程、开创心路历程等等。
         </p>
     </main>
@@ -60,8 +60,10 @@ export default {
             isFalse,
             isTrue,
             action : false,
-            ser : 6,
-            value:2.5
+            ser : 3,
+            value:2.5,
+            title:'',
+            cont:''
         }
 
     },
@@ -75,6 +77,13 @@ export default {
                 this.action = false;
             }
         }
+    },
+    created(){
+        var query = this.$route.query;
+        console.log(query);
+        this.title = query.test;
+        this.cont = query.cont;
+        this.value = Number(query.value);
     }
 }
 </script>

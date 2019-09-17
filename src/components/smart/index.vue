@@ -4,28 +4,28 @@
    <header>
         <van-swipe indicator-color='#71C99C' :duration='800' :autoplay="3000"  :loop="true" >
             <van-swipe-item>
-                <img src="@/assets/img/dt-img2.png" alt="">
+                <img src="@/assets/img/qq1.jpg" alt="">
             </van-swipe-item>
             <van-swipe-item>
-                <img src="@/assets/img/dt-img2.png" alt="">
+                <img src="@/assets/img/qq2.jpg" alt="">
             </van-swipe-item>
             <van-swipe-item>
-                <img src="@/assets/img/dt-img2.png" alt="">
+                <img src="@/assets/img/qq3.jpg" alt="">
             </van-swipe-item>
             <van-swipe-item>
-                <img src="@/assets/img/dt-img2.png" alt="">
+                <img src="@/assets/img/qq4.jpg" alt="">
             </van-swipe-item>
         </van-swipe>
    </header>
     <nav-toop class='toop' @value="handleClick"></nav-toop>
     <div class="content">
-        <div @click="handleClickPush" v-for='i in 8' :key='i'>
-            <img src="@/assets/img/wdsc-kcimg.png" alt="">
+        <div @click="handleClickPush(item)" v-for='(item,i) in list' :key='i'>
+            <img :src="item.img" alt="">
             <div class='content-item'>
-                <p>怎样成为一个自律的人呢？</p>
+                <p>{{item.test}}</p>
                 <p>
                     <img src="@/assets/icon/mian-rsicon.png" alt="">
-                    <span>157810</span>
+                    <span>{{item.value}}</span>
                 </p>
             </div>
         </div>
@@ -38,7 +38,57 @@ import navToop from '@/components/global/nav-toop'
 export default {
     data(){
         return {
-            value : ''
+            value : '',
+            list:[
+                {
+                    test:'语言智能 Language',
+                    img:require('@/assets/img/qq1.jpg'),
+                    value:2862,
+                    cont:'体听说读写的能力，个人能顺利而高效地利用语言描述事件，表达思想并与人交流的能力'
+                },
+                {
+                    test:'音乐智能 Music',
+                    img:require('@/assets/img/qq2.jpg'),
+                    value:8331,
+                    cont:'个人感受、辨别、记忆、改变和表达音乐的能力，个人对节奏、音调和旋律的敏感以及通过作曲、演奏和歌唱等表达自己思想能力'
+                },
+                {
+                    test:'逻辑数学智能 Math',
+                    img:require('@/assets/img/qq3.jpg'),
+                    value:12642,
+                    cont:'个体运算和推理的能力，能够将物体量化，对命题和假设，进行思考和推理，并进行复杂的数学运算等'
+                },
+                {
+                    test:'音乐智能 Art',
+                    img:require('@/assets/img/qq4.jpg'),
+                    value:57395,
+                    cont:'利用视觉信息和三维空间的方式进行思维的能力'
+                },
+                {
+                    test:'身体智能 TPR',
+                    img:require('@/assets/img/qq5.jpg'),
+                    value:2862,
+                    cont:'灵活的操纵物体，调整身体的能力'
+                },
+                {
+                    test:'自然观察智能 Science',
+                    img:require('@/assets/img/qq6.jpg'),
+                    value:8331,
+                    cont:'善于观察自然界中的各种形态，对物体进行辨认和分类，洞察自然的能力；'
+                },
+                {
+                    test:'人际关系智能 Social',
+                    img:require('@/assets/img/qq7.jpg'),
+                    value:12642,
+                    cont:'个体与人相处与交往的能力，个人觉察、体验他人情绪、情感和意图并据此作出适宜反应的能力'
+                },
+                {
+                    test:'内省智能 Speech',
+                    img:require('@/assets/img/qq8.jpg'),
+                    value:12642,
+                    cont:'意识到自己的心理活动以及原因，理解他人的思想、情绪和情感，依据对自己的认识及对他人的理解指导自己的行为'
+                }
+            ]
         }
     },
     methods:{
@@ -48,8 +98,8 @@ export default {
         handleClick(va,a){
             console.log(va,a)
         },
-        handleClickPush(){
-            this.$router.push('/smart/details');
+        handleClickPush(e){
+            this.$router.push({path:'/smart/details',query:e});
         }
     },
     created(){
@@ -97,7 +147,7 @@ export default {
         overflow: hidden;
         margin:.2rem 0 0 .2rem;
         >img{
-            width:100%;height:2.6rem;
+            width:100%;height:2rem;
         }
         .content-item{
             background-color:#fff;
