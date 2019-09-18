@@ -37,31 +37,31 @@ export default {
             list:[
                 {
                     test:'音乐智能 Art',
-                    img:require('@/assets/img/qq4.jpg'),
+                    img:require('@/assets/img/09191207.jpg'),
                     value:30,
                     cont:'利用视觉信息和三维空间的方式进行思维的能力'
                 },
                 {
                     test:'身体智能 TPR',
-                    img:require('@/assets/img/qq5.jpg'),
+                    img:require('@/assets/img/0922.jpg'),
                     value:60,
                     cont:'灵活的操纵物体，调整身体的能力'
                 },
                 {
                     test:'自然观察智能 Science',
-                    img:require('@/assets/img/qq6.jpg'),
+                    img:require('@/assets/img/0918.jpg'),
                     value:90,
                     cont:'善于观察自然界中的各种形态，对物体进行辨认和分类，洞察自然的能力；'
                 },
                 {
                     test:'人际关系智能 Social',
-                    img:require('@/assets/img/qq7.jpg'),
+                    img:require('@/assets/img/0215.jpg'),
                     value:42,
                     cont:'个体与人相处与交往的能力，个人觉察、体验他人情绪、情感和意图并据此作出适宜反应的能力'
                 },
                 {
                     test:'内省智能 Speech',
-                    img:require('@/assets/img/qq8.jpg'),
+                    img:require('@/assets/img/0112.jpg'),
                     value:64,
                     cont:'意识到自己的心理活动以及原因，理解他人的思想、情绪和情感，依据对自己的认识及对他人的理解指导自己的行为'
                 }

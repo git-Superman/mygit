@@ -74,7 +74,6 @@ export default new Router({
         },
         {
           path:'school',
-          name:'school',
           component:smartSchool
         },
         {
@@ -147,7 +146,9 @@ export default new Router({
               path:'/',redirect:'detail'
             },
             {
-              path:'detail',component:smartSchoolDetail
+              path:'detail',
+              name:'school',
+              component:smartSchoolDetail
             },
             {
               path:'ds',component:smartSchoolDs

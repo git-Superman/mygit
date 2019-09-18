@@ -6,21 +6,21 @@
     </header>
     <main>
         <div class="content">
-        <div @click="handleClickPush" v-for='i in 8' :key='i'>
-            <img src="@/assets/img/dt-img.png" alt="">
+        <div @click="handleClickPush" v-for='(item,i) in list' :key='i'>
+            <img :src="item.img" alt="">
             <div>
                 <div class='content-t'>
                     <img src="@/assets/img/dt-face.png" alt="">
                     <div>
                         <p>你的眼yey</p>
-                        <span>12-05 14:30</span>
+                        <span>{{item.time}}</span>
                     </div>
                 </div>
                 <div class='content-item'>
-                    <p>换个发型，换个心情！</p>
+                    <p>{{item.test}}</p>
                     <p>
                         <img :src="isTrue" alt="">
-                        <span>15</span>
+                        <span>{{item.value}}</span>
                     </p>
                 </div>
             </div>
@@ -57,7 +57,27 @@ export default {
             isTrue,
             isFalse,
             test : '搜索您想了解的话题..',
-            show : false
+            show : false,
+            list : [
+                {
+                    img : require('@/assets/img/dt-img.png'),
+                    test : '换个发型',
+                    time : '09-26 14:30',
+                    value : 78
+                },
+                {
+                    img : require('@/assets/img/dt-img.png'),
+                    test : '换个心情。',
+                    time : '09-26 14:30',
+                    value : 35
+                },
+                {
+                    img : require('@/assets/img/dt-img.png'),
+                    test : '换个发型，换个心情！',
+                    time : '09-26 14:30',
+                    value : 12
+                }
+            ]
         }
     },
     methods:{

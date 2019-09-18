@@ -2,11 +2,11 @@
 <div>
     <header>
         <div class='head'>
-            <img src="@/assets/img/dt-img2.png" alt="">
+            <img src="@/assets/img/dt-face.png" alt="">
         </div>
         <div class='body'>
-            <p>我的昵称</p>
-            <span>我就是我，不一样的烟火。我就是我，不一样的烟火。</span>
+            <p>你的眼bay</p>
+            <span>我就是我，不一样的烟火。</span>
         </div>
         <img @click='handleClickPush(0)' class='last' src="@/assets/icon/wd-bjicon.png" alt="">
     </header>

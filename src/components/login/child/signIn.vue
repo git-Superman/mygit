@@ -80,10 +80,10 @@ export default {
             background-color:#599E01;
         }
         .t{
-                font-size:.28rem;
-                position:absolute;
-                right:0;
-                color:#999;
+            font-size:.28rem;
+            position:absolute;
+            right:0;
+            color:#999;
         }
         span{
             color:#599E01;
@@ -94,7 +94,7 @@ export default {
     padding:.4rem .4rem .6rem;
     .list-letter{
         span{
-            letter-spacing: .11rem;
+            letter-spacing: .06rem;
         }
     }
     .list-item{
@@ -131,15 +131,15 @@ export default {
                 width:26%;
         }
         button{
-                width:32%;
-                height:.7rem;
-                right:.06rem;
-                position: absolute;
-                font-size:.24rem;
-                color:#fff;
-                margin:0;
-                background-color:#7CC223;
-                border:0;
+            width:32%;
+            height:.7rem;
+            right:.06rem;
+            position: absolute;
+            font-size:.24rem;
+            color:#fff;
+            margin:0;
+            background-color:#7CC223;
+            border:0;
         }
     }
     .list-pdu{

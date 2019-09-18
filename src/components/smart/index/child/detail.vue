@@ -14,14 +14,14 @@
         <h5 class='title'>老师介绍</h5>
         <div class='main-item' @click='handleClickPush'>
             <div>
-                <img src="@/assets/img/wdsc-lsimg.png" alt="">
+                <img src="@/assets/img/Arthur1.png" alt="">
             </div>
             <ul>
                 <li>
-                    <h6>李高飞 <span>国家级特级情商讲师</span> </h6>
+                    <h6>Arthur M <span>英国特级少儿讲师</span> </h6>
                 </li>
                 <li class='item-p'>
-                    <p>简介：Lorem ipsum dolor, sit amet consectetur?</p>
+                    <p>简介：Arthur老师来自英国，拥有非常丰富的少儿英语教学经验，曾在上海某国际学校教过半年，目前居住在瑞士，Arthur老师非常富有激情，热爱教学与音乐，会弹奏各种乐器，老师教学时喜欢用游戏与歌曲来丰富课堂氛围，小朋友们快来与Arthur老师一起学习吧！</p>
                 </li>
                 <li class='item-div'>
                     <h4>主讲课程：</h4>
@@ -68,7 +68,12 @@ export default {
     },
     methods:{
         handleClickPush(){
-            this.$router.push('/smart/smartDynamicTeacherDetail');
+            this.$router.push({path:'/smart/smartDynamicTeacherDetail',query:{
+                title : 'Arthur M',
+                img : require('@/assets/img/Arthur1.png'),
+                cont : 'Arthur老师来自英国，拥有非常丰富的少儿英语教学经验，曾在上海某国际学校教过半年，目前居住在瑞士，Arthur老师非常富有激情，热爱教学与音乐，会弹奏各种乐器，老师教学时喜欢用游戏与歌曲来丰富课堂氛围，小朋友们快来与Arthur老师一起学习吧！',
+                subTitle : '英国特级少儿讲师'
+            }});
         }
     },
     created(){
@@ -163,7 +168,7 @@ main{
             }
             .item-p{
                 margin:.12rem 0;
-                max-height: .8rem;
+                max-height: .7rem;
                 overflow: hidden;
                 font-size:.26rem;
             }

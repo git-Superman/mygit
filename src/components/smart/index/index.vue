@@ -2,7 +2,7 @@
 <div>
     <nav-go></nav-go>
     <div class='banner'>
-        <img src="@/assets/img/90da08d489d9496f9c7aef96f0fb3c25.jpg" alt="">
+        <img src="@/assets/img/features0.jpg" alt="">
     </div>
     <nav-details @value='handleInx'></nav-details>
     <router-view/>

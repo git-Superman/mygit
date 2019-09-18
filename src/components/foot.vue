@@ -95,7 +95,8 @@ export default {
           this.$router.push('/smart');
         break;
         case 1:
-          this.$router.push('/smart/school');
+          // this.$router.push('/smart/school');
+          this.$router.push('/smart/schoolDetails');
         break;
         case 2:
           this.$router.push('/smart/course');

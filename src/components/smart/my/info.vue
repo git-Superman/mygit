@@ -5,7 +5,7 @@
         <ul>
             <li class='item-list'>
                 <p>头像</p>
-                <img src="@/assets/img/dt-img2.png" alt="">
+                <img src="@/assets/img/dt-face.png" alt="">
             </li>
             <li class='item-list'>
                 <p>昵称</p>
@@ -41,12 +41,12 @@ export default {
     data() {
         return {
             test : '个人信息',
-            value:'玩家昵称玩家昵称',
+            value:'你的眼bay',
             show : true,
             isTrue,
             isFalse,
-            active : true,
-            text :'最好的人,像孩子一样,真诚。像夕阳一样,温暖。像天空一样,宁静。'
+            active : false,
+            text :'我就是我，不一样的烟火。'
         }
     },
     methods:{

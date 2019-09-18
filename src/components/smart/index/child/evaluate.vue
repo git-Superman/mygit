@@ -2,13 +2,13 @@
 <div>
     <main>
         <ul>
-            <li v-for='i in 5' :key='i' class='list-items'>
-                <img src="@/assets/img/wd-face.png" alt="">
+            <li v-for='(item,i) in list' :key='i' class='list-items'>
+                <img :src="item.img" alt="">
                 <div>
-                    <h5>学生小AA</h5>
-                    <span>2019/12/20 15:00</span>
-                    <p>
-                        课程非常好，老师也很棒！通俗易懂，值得推荐。
+                    <h5>{{item.title}}</h5>
+                    <span v-html='item.time'></span>
+                    <p v-html='item.cont'>
+                        
                     </p>
                 </div>
             </li>
@@ -16,6 +16,35 @@
     </main>
 </div>
 </template>
+<script>
+export default{
+    data() {
+        return {
+            list:[
+                {
+                    name : '学生A',
+                    cont : '课程非常好，老师讲解的很清楚，通俗易懂',
+                    time : '2019/09/18&nbsp;15:06',
+                    img : require('@/assets/img/dt-face2.png')
+                },
+                {
+                    name : '学生B',
+                    cont : '通俗易懂，值得推荐。',
+                    time : '2019/09/18&nbsp;13:23',
+                    img : require('@/assets/img/wd-face.png')
+                },
+                {
+                    name : '学生C',
+                    cont : '课程非常好，老师也很棒！',
+                    time : '2019/09/18&nbsp;9:03',
+                    img : require('@/assets/img/wd-face.png')
+                },
+            ]
+        }
+    }
+}
+</script>
+
 <style lang="less" scoped>
 main{
     font-size:.32rem;

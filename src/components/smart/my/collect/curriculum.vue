@@ -41,15 +41,6 @@ export default {
             list : [
                 {
                     active : false
-                },
-                {
-                    active : false
-                },
-                {
-                    active : false
-                },
-                {
-                    active : false
                 }
             ],
             active : false
