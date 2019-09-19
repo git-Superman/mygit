@@ -10,9 +10,9 @@
             <img :src="item.img" alt="">
             <div>
                 <div class='content-t'>
-                    <img src="@/assets/img/dt-face.png" alt="">
+                    <img :src="item.imgT" alt="">
                     <div>
-                        <p>你的眼yey</p>
+                        <p>{{item.title}}</p>
                         <span>{{item.time}}</span>
                     </div>
                 </div>
@@ -60,22 +60,44 @@ export default {
             show : false,
             list : [
                 {
-                    img : require('@/assets/img/dt-img.png'),
-                    test : '换个发型',
-                    time : '09-26 14:30',
-                    value : 78
-                },
-                {
-                    img : require('@/assets/img/dt-img.png'),
-                    test : '换个心情。',
+                    title : '怪阿姨',
+                    img : require('@/assets/img/96781a9bcaf35368e7b062a23c827258.jpg'),
+                    imgT : require('@/assets/img/96781a9bcaf35368e7b062a23c827258.jpg'),
+                    test : '今天天气好棒呀！整个人的心情都立马棒棒哒了呢！！',
                     time : '09-26 14:30',
                     value : 35
                 },
                 {
+                    title : '你的眼yey',
                     img : require('@/assets/img/dt-img.png'),
-                    test : '换个发型，换个心情！',
+                    imgT : require('@/assets/img/dt-face.png'),
+                    test : '生活是一场没有尽头的旅行',
+                    time : '09-26 14:30',
+                    value : 78
+                },
+                {
+                    title : '你的眼yey',
+                    img : require('@/assets/img/dt-img.png'),
+                    imgT : require('@/assets/img/dt-face.png'),
+                    test : '换个发型，  换个心情！',
                     time : '09-26 14:30',
                     value : 12
+                },
+                {
+                    title : '多多',
+                    img : require('@/assets/img/12cafd8e85e9ff2c3cb476632dd69cb6b4876f12c660-xTydNq_fw658.jpg'),
+                    imgT : require('@/assets/img/12cafd8e85e9ff2c3cb476632dd69cb6b4876f12c660-xTydNq_fw658.jpg'),
+                    test : '一夜之间家里的茶花都开了',
+                    time : '09-28 7:30',
+                    value : 326
+                },
+                {
+                    title : '怪阿姨',
+                    img : require('@/assets/img/96781a9bcaf35368e7b062a23c827258.jpg'),
+                    imgT : require('@/assets/img/96781a9bcaf35368e7b062a23c827258.jpg'),
+                    test : '今天吃点什么呢！！',
+                    time : '09-28 15:23',
+                    value : 35
                 }
             ]
         }
@@ -121,6 +143,7 @@ main{
             background-color:#fff;
             >img{
                 width:100%;
+                height:2.8rem;
             }
              .content-t{
                  display:flex;

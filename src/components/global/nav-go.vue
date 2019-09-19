@@ -9,12 +9,22 @@
 export default {
     data() {
         return {
-
+            p : ''
+        }
+    },
+    watch:{
+        $route(form,go){
+            // console.log(form,go);
+            this.p = form.path;
         }
     },
     methods:{
         handleClickPush(){
-            this.$router.go(-1);
+            if(this.p == '/smart/details/ds' || this.p == '/smart/details/evaluate' || this.p == '/smart/details/detail'){
+                this.$router.push('/smart/course/index');
+            }else{
+                this.$router.go(-1);
+            }
         }
     }
 }
